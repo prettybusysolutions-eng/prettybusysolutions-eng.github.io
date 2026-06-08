@@ -1,0 +1,18 @@
+{
+  "id": "/staging-closeout-runner.html",
+  "name": "GreenOps Closeout Runner",
+  "short_name": "GreenOps Runner",
+  "description": "Stable installed runner for GreenOps iPhone closeout verification.",
+  "start_url": "/staging-closeout-runner.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#245b43",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

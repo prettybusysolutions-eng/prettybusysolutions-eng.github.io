@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="GreenOps Runner" />
+    <meta name="theme-color" content="#245b43" />
+    <link rel="manifest" href="/runner-manifest.webmanifest" />
+    <title>GreenOps Closeout Runner</title>
+    <style>
+      body {
+        margin: 0;
+        background: #f7f3ec;
+        color: #18201b;
+        font: 16px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 24px 18px 42px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 27px;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        margin: 14px 0;
+        font-weight: 700;
+      }
+
+      input {
+        min-height: 44px;
+        border: 1px solid #d7cdbc;
+        border-radius: 6px;
+        background: white;
+        color: #18201b;
+        font: inherit;
+        padding: 0 10px;
+      }
+
+      input[type="checkbox"] {
+        min-height: auto;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+      }
+
+      .check-row {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        align-items: start;
+        gap: 8px;
+        margin: 16px 0;
+        font-weight: 700;
+      }
+
+      button {
+        width: 100%;
+        min-height: 50px;
+        margin: 10px 0;
+        border: 0;
+        border-radius: 6px;
+        background: #245b43;
+        color: white;
+        font: inherit;
+        font-weight: 800;
+      }
+
+      button.secondary {
+        background: #39443d;
+      }
+
+      button:disabled {
+        background: #8a918b;
+      }
+
+      .status {
+        min-height: 132px;
+        margin: 16px 0;
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+        border: 1px solid #d7cdbc;
+        border-radius: 6px;
+        background: #fffaf1;
+        padding: 12px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/stagingCloseoutRunner-C4YpdBuE.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-CQJwjZ_n.js">
+    <link rel="modulepreload" crossorigin href="/assets/backend-BCvrCE6M.js">
+  </head>
+  <body>
+    <main>
+      <h1>GreenOps closeout runner</h1>
+      <p>This page bypasses the full route screen. It signs into the staging crew, seeds the assigned stop, saves one after-photo proof to the device queue, and prints the client_event_id.</p>
+      <div class="status" id="status">Loading persisted runner state...</div>
+
+      <label>
+        Email
+        <input id="email" autocomplete="username" value="prettybusysolutions+greenops-assigned-1780426160457@gmail.com" />
+      </label>
+
+      <label>
+        Password
+        <input id="password" autocomplete="current-password" placeholder="Enter staging crew password" type="password" />
+      </label>
+
+      <button type="button" id="signin">Initialize fixture and sign in</button>
+
+      <label>
+        After photo
+        <input id="photo" accept="image/jpeg,image/png,image/webp" capture="environment" type="file" />
+      </label>
+
+      <label class="check-row">
+        <input id="queueOnly" type="checkbox" checked />
+        <span>Save to local queue first. Leave this checked for the iPhone gate.</span>
+      </label>
+
+      <button type="button" id="submit">Submit proof to device queue</button>
+      <button class="secondary" type="button" id="inspect">Inspect queue and surface</button>
+      <button class="secondary" type="button" id="sync">Diagnose 343c4867 replay</button>
+      <button class="secondary" type="button" id="openApp">Open GreenOps replay</button>
+    </main>
+
+  </body>
+</html>

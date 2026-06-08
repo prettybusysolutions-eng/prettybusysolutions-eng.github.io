@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenOps Staging Fixture</title>
+    <style>
+      body {
+        margin: 0;
+        background: #f7f3ec;
+        color: #18201b;
+        font: 16px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 28px 20px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      code {
+        display: block;
+        overflow-wrap: anywhere;
+        padding: 12px;
+        border: 1px solid #d7cdbc;
+        border-radius: 6px;
+        background: #fffaf1;
+      }
+
+      button {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 18px;
+        border: 0;
+        border-radius: 6px;
+        background: #245b43;
+        color: white;
+        font: inherit;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>GreenOps staging fixture</h1>
+      <p>This seeds the installed PWA with the route stop that is already assigned to the verified staging crew user.</p>
+      <p>Login email:</p>
+      <code>prettybusysolutions+greenops-assigned-1780426160457@gmail.com</code>
+      <p style="margin-top:16px">Use the password Xzenia sends in Telegram.</p>
+      <button type="button" id="seed">Seed phone and open GreenOps</button>
+    </main>
+
+    <script>
+      const fixture = {
+        company: {
+          billingPreference: 'Manual review',
+          name: 'GreenOps staging negative test 1780426160457',
+          serviceArea: 'Staging route stop fixture',
+        },
+        clients: [
+          {
+            billingType: 'Manual review',
+            email: '',
+            id: '4acc8717-ae10-4fa5-a4e2-aa70bfc533ba',
+            name: 'Staging Client 1780426160457',
+            notes: '',
+            phone: '',
+          },
+        ],
+        crews: [
+          {
+            foreman: 'Assigned Laborer 1780426160457',
+            id: '928117a8-8d0e-4ea2-b04e-c5dda9130c65',
+            name: 'Staging Crew 1780426160457',
+          },
+        ],
+        properties: [
+          {
+            accessNotes: 'Assigned staging stop for real-backend iPhone replay.',
+            address: '1 Test Way',
+            clientId: '4acc8717-ae10-4fa5-a4e2-aa70bfc533ba',
+            id: '2e5ed0a1-ecb7-4d74-9ae8-a187f9f8f368',
+            name: 'Staging Property 1780426160457',
+            serviceNotes: 'Use for one completed closeout with after photo.',
+          },
+        ],
+        services: [
+          {
+            billingStatus: 'Ready to invoice',
+            budgetedHours: 1,
+            crewId: '928117a8-8d0e-4ea2-b04e-c5dda9130c65',
+            equipment: 'Standard mow rig',
+            id: '66be13e5-2202-4142-8cdd-4dbe56c9d243',
+            price: '100',
+            propertyId: '2e5ed0a1-ecb7-4d74-9ae8-a187f9f8f368',
+            serviceType: 'Weekly maintenance',
+            weatherSensitive: false,
+          },
+        ],
+      }
+
+      document.getElementById('seed').addEventListener('click', () => {
+        localStorage.setItem('greenops-staging-iphone-fixture', '1')
+        localStorage.setItem('greenops-setup-company', JSON.stringify(fixture.company))
+        localStorage.setItem('greenops-setup-clients', JSON.stringify(fixture.clients))
+        localStorage.setItem('greenops-setup-crews', JSON.stringify(fixture.crews))
+        localStorage.setItem('greenops-setup-properties', JSON.stringify(fixture.properties))
+        localStorage.setItem('greenops-setup-services', JSON.stringify(fixture.services))
+        window.location.assign('/')
+      })
+    </script>
+  </body>
+</html>
