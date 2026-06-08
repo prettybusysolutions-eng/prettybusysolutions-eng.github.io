@@ -1,4 +1,4 @@
-const CACHE_NAME = 'greenops-beta-shell-v2'
+const CACHE_NAME = 'greenops-beta-shell-v3'
 const SHELL_ASSETS = [
   '/',
   '/staging-closeout-runner.html',
