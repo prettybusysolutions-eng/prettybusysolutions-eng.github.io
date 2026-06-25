@@ -1,11 +1,11 @@
 const CACHE_NAME = 'greenops-beta-shell-v7'
 const BUILD_ASSETS = [
-  "/assets/app-CP3eP7H6.css",
-  "/assets/app-DyGFOmh2.js",
-  "/assets/backend-BPVzgpAk.js",
-  "/assets/closeoutQueue-B7xDrKvx.js",
-  "/assets/iphoneCloseoutHarness-6BLwdLn7.js",
-  "/assets/stagingCloseoutRunner-CF1_o3BZ.js"
+  "/assets/app-BebjOCox.js",
+  "/assets/app-CPvTWcvP.css",
+  "/assets/backend-B5PTsUI3.js",
+  "/assets/closeoutQueue-CF06agHr.js",
+  "/assets/iphoneCloseoutHarness-D03K1wME.js",
+  "/assets/stagingCloseoutRunner-BO_qaFIA.js"
 ]
 const SHELL_ASSETS = [
   '/',
