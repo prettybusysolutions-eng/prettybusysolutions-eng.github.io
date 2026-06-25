@@ -1,4 +1,4 @@
-const CACHE_NAME = 'greenops-beta-shell-v7'
+const CACHE_NAME = 'greenops-beta-shell-v8'
 const BUILD_ASSETS = [
   "/assets/app-BebjOCox.js",
   "/assets/app-CPvTWcvP.css",
