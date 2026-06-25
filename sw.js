@@ -1,6 +1,7 @@
-const CACHE_NAME = 'greenops-beta-shell-v8'
+const CACHE_NAME = 'greenops-beta-shell-v9'
+const CACHE_PREFIX = 'greenops-beta-shell-'
 const BUILD_ASSETS = [
-  "/assets/app-BebjOCox.js",
+  "/assets/app-Bhqueuj6.js",
   "/assets/app-CPvTWcvP.css",
   "/assets/backend-B5PTsUI3.js",
   "/assets/closeoutQueue-CF06agHr.js",
@@ -26,9 +27,25 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))),
+      .then(async (keys) => {
+        const oldShellCaches = keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME)
+        await Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))
+        await self.clients.claim()
+        if (oldShellCaches.length === 0) return
+
+        const clients = await self.clients.matchAll({ includeUncontrolled: true, type: 'window' })
+        await Promise.all(
+          clients.map((client) => {
+            if (!client.url.startsWith(self.location.origin)) return undefined
+            return client.navigate(client.url)
+          }),
+        )
+      }),
   )
-  self.clients.claim()
+})
+
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'GREENOPS_SKIP_WAITING') self.skipWaiting()
 })
 
 self.addEventListener('fetch', (event) => {
