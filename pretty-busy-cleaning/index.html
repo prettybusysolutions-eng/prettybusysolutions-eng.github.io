@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pretty Busy Cleaning | Tampa Bay Home and Office Cleaning</title>
+    <meta
+      name="description"
+      content="Pretty Busy Cleaning serves Tampa Bay homes and small offices with detail-first cleaning, reliable scheduling, and clear local quotes."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #151515;
+        --muted: #5f646b;
+        --line: #d9ddd8;
+        --leaf: #49735a;
+        --mist: #eef4ee;
+        --paper: #fbfbf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .hero {
+        min-height: 78vh;
+        display: grid;
+        align-items: end;
+        background:
+          linear-gradient(180deg, rgba(251, 251, 248, 0.05), rgba(251, 251, 248, 0.92)),
+          url("./assets/clean-counter.png") center / cover;
+      }
+
+      .hero-inner,
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero-inner {
+        padding: 40px 0 48px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--leaf);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(2.6rem, 7vw, 5.75rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 620px;
+        margin: 22px 0 0;
+        color: #30342f;
+        font-size: clamp(1.05rem, 2vw, 1.35rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--ink);
+        padding: 0 18px;
+        background: var(--ink);
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: rgba(251, 251, 248, 0.88);
+        color: var(--ink);
+      }
+
+      main {
+        padding: 40px 0 64px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .service-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: var(--muted);
+      }
+
+      .service-list li::before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-right: 9px;
+        border-radius: 50%;
+        background: var(--leaf);
+        vertical-align: 0.08em;
+      }
+
+      .contact-band {
+        margin-top: 34px;
+        border: 1px solid var(--line);
+        background: var(--mist);
+        padding: 22px;
+      }
+
+      .contact-band strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          min-height: 72vh;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero" aria-label="Pretty Busy Cleaning">
+      <div class="hero-inner">
+        <p class="eyebrow">Tampa Bay home and small office cleaning</p>
+        <h1>Pretty Busy Cleaning</h1>
+        <p class="lead">
+          Detail-first cleaning, reliable scheduling, and clear local quotes for homes
+          and small offices around Tampa Bay.
+        </p>
+        <div class="actions" aria-label="Contact actions">
+          <a class="button" href="tel:+18133818510">Call (813) 381-8510</a>
+          <a class="button secondary" href="https://yelp.com/biz/pretty-busy-cleaning-tampa-bay">Message on Yelp</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="grid" aria-label="Services and hours">
+        <div class="panel">
+          <h2>Services</h2>
+          <ul class="service-list">
+            <li>Regular home cleaning</li>
+            <li>Deep reset cleaning</li>
+            <li>Move-in and move-out cleaning</li>
+            <li>Small office upkeep</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Hours</h2>
+          <p>Monday-Saturday, 8:00 AM-6:00 PM. Closed Sunday.</p>
+        </div>
+        <div class="panel">
+          <h2>Service Area</h2>
+          <p>Tampa Bay and surrounding local communities.</p>
+        </div>
+      </section>
+
+      <section class="contact-band" aria-label="Quote details">
+        <strong>Fast local quote</strong>
+        <p>
+          Send your city or ZIP, space type, approximate size, cleaning goal, and
+          preferred day. Pretty Busy Cleaning will keep the quote process clear and
+          practical.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
