@@ -2,7 +2,7 @@ const CACHE_NAME = 'greenops-beta-shell-v10'
 const CACHE_PREFIX = 'greenops-beta-shell-'
 const BUILD_ASSETS = [
   "/assets/app-CPvTWcvP.css",
-  "/assets/app-KEJijYhD.js",
+  "/assets/app-D7KHlgD1.js",
   "/assets/backend-DhM4QHrd.js",
   "/assets/closeoutQueue-CF06agHr.js",
   "/assets/iphoneCloseoutHarness-D03K1wME.js",
