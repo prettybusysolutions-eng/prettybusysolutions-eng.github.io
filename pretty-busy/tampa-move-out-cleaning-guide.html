@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A precise Tampa move-out cleaning guide from Pretty Busy Cleaning."
+    />
+    <title>Tampa Move-Out Cleaning Guide | Pretty Busy Cleaning</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f5f2ec;
+        --muted: #b9b2a6;
+        --line: rgba(245, 242, 236, 0.16);
+        --panel: #151515;
+        --panel-2: #0d0d0d;
+        --accent: #d8c29d;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #080808;
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(8, 8, 8, 0.18), #080808 78%),
+          #080808;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(8, 8, 8, 0.9);
+      }
+
+      .nav {
+        width: min(1120px, calc(100% - 32px));
+        min-height: 72px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        letter-spacing: 0;
+      }
+
+      .brand strong {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .nav a {
+        color: var(--ink);
+        font-size: 0.9rem;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav a:hover {
+        border-color: var(--accent);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 72vh;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.46;
+        filter: saturate(0.78) contrast(1.1);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(8, 8, 8, 0.92), rgba(8, 8, 8, 0.34)),
+          linear-gradient(180deg, rgba(8, 8, 8, 0.1), #080808 94%);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 88px 0 72px;
+      }
+
+      .kicker {
+        margin: 0 0 18px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 820px;
+        margin: 0;
+        color: var(--white);
+        font-size: clamp(2.4rem, 6vw, 5.8rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin: 28px 0 0;
+        color: var(--ink);
+        font-size: clamp(1rem, 2vw, 1.28rem);
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 72px 0 96px;
+      }
+
+      .article-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(260px, 0.34fr);
+        gap: 56px;
+        align-items: start;
+      }
+
+      article {
+        max-width: 760px;
+      }
+
+      h2 {
+        margin: 56px 0 16px;
+        color: var(--white);
+        font-size: clamp(1.55rem, 3vw, 2.4rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 32px 0 8px;
+        color: var(--white);
+        font-size: 1.08rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 18px;
+        color: var(--ink);
+        font-size: 1rem;
+      }
+
+      ul {
+        margin: 20px 0 32px;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+
+      aside {
+        position: sticky;
+        top: 24px;
+        padding: 24px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      aside h2 {
+        margin-top: 0;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+      }
+
+      .standard-list li {
+        color: var(--muted);
+      }
+
+      .cta {
+        margin-top: 72px;
+        padding: 40px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cta p {
+        max-width: 760px;
+      }
+
+      .cta a {
+        display: inline-flex;
+        min-height: 44px;
+        margin-top: 8px;
+        align-items: center;
+        border-bottom: 1px solid var(--accent);
+        color: var(--white);
+        text-decoration: none;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0;
+        font-size: 0.84rem;
+      }
+
+      @media (max-width: 820px) {
+        .nav {
+          min-height: 64px;
+        }
+
+        .hero {
+          min-height: 68vh;
+        }
+
+        .article-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        aside {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <nav class="nav" aria-label="Primary">
+          <div class="brand">
+            <strong>Pretty Busy Cleaning</strong>
+            <span>Tampa Bay property care</span>
+          </div>
+          <a href="mailto:prettybusysolutions@gmail.com">Request scope</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <img
+          src="assets/pretty-busy-move-in-out-20260629.png"
+          alt="A clean interior surface prepared for move-in or move-out service"
+        />
+        <div class="hero-inner">
+          <p class="kicker">Move-out cleaning guide</p>
+          <h1>Tampa Move-Out Cleaning Guide</h1>
+          <p class="lede">
+            Move-out cleaning is not a casual reset. It is the final condition
+            of a property before keys change hands, a lease closes, or a new
+            owner walks through the door.
+          </p>
+        </div>
+      </section>
+
+      <main>
+        <div class="article-grid">
+          <article>
+            <p>
+              The right cleaner should clarify the work before arrival. Standard
+              cleaning, deep reset, move-in readiness, pet-related buildup,
+              appliance detail, grout, baseboards, and cabinet interiors are
+              not the same job. If the scope is vague, the result will be vague.
+            </p>
+
+            <p>
+              Pretty Busy Cleaning treats move-out work as property care: clear
+              scope, controlled execution, and a polished handoff.
+            </p>
+
+            <h2>What To Clarify Before Booking</h2>
+            <p>Before accepting a move-out cleaning quote, ask:</p>
+            <ul>
+              <li>Which rooms are included?</li>
+              <li>Are kitchens and bathrooms standard-cleaned or deep-cleaned?</li>
+              <li>Are appliance exteriors included?</li>
+              <li>
+                Are oven interiors, fridge interiors, cabinet interiors,
+                blinds, grout, baseboards, walls, and windows included or
+                separate?
+              </li>
+              <li>Will the home be empty before the appointment?</li>
+              <li>Who provides supplies?</li>
+              <li>What arrival window should be expected?</li>
+              <li>
+                What happens if the cleaner finds a scope issue on arrival?
+              </li>
+            </ul>
+
+            <p>
+              These details matter because an empty property exposes everything:
+              floor edges, cabinet interiors, wall marks, bathroom buildup,
+              dust lines, appliance seams, and the areas furniture used to hide.
+            </p>
+
+            <h2>Standard Clean Vs. Deep Reset</h2>
+            <p>
+              A standard clean is for a property that has been maintained and
+              needs a polished handoff. It usually covers visible surfaces,
+              bathrooms, kitchen surfaces, dusting, floors, and general reset
+              work.
+            </p>
+            <p>
+              A deep reset is for heavier conditions. It may involve buildup,
+              pet-related cleanup, grout attention, baseboards, cabinet fronts
+              or interiors, appliance detail, and additional time in kitchens
+              and bathrooms.
+            </p>
+            <p>
+              The mistake is treating both jobs as one generic quote. That is
+              how expectations break. A premium cleaning starts by naming the
+              work correctly.
+            </p>
+
+            <h2>Why Quotes Vary</h2>
+            <p>Move-out cleaning quotes vary because the job changes with:</p>
+            <ul>
+              <li>property size</li>
+              <li>number of bathrooms</li>
+              <li>kitchen condition</li>
+              <li>pet hair or odor</li>
+              <li>appliance detail</li>
+              <li>cabinet or drawer interiors</li>
+              <li>floor and grout condition</li>
+              <li>timeline and access</li>
+              <li>whether the home is empty</li>
+            </ul>
+            <p>
+              A low quote with no scope can become expensive later. A clear
+              quote protects the client, the cleaner, and the final result.
+            </p>
+
+            <h2>FAQ</h2>
+            <h3>How much should a Tampa move-out cleaning cost?</h3>
+            <p>
+              It depends on the size, condition, timing, and level of detail. A
+              responsible quote should explain the scope instead of giving a
+              number with no context.
+            </p>
+
+            <h3>Should I book a standard clean or a deep clean?</h3>
+            <p>
+              Choose a standard clean when the home has been maintained and
+              needs a polished handoff. Choose a deep clean when the home needs
+              heavier reset work, pet-related cleanup, grout or baseboard
+              attention, or extra kitchen and bathroom detail.
+            </p>
+
+            <h3>What should I send before asking for a quote?</h3>
+            <p>
+              Send the city or ZIP, home size, number of bathrooms, timing,
+              whether the home will be empty, and any focus areas such as
+              floors, appliances, cabinets, pet hair, bathrooms, or grout.
+            </p>
+
+            <div class="cta" id="request">
+              <h2>Request A Scoped Quote</h2>
+              <p>
+                Preparing for a move-in or move-out around Tampa Bay? Send the
+                home size, city or ZIP, timing, and the areas that matter most.
+                Pretty Busy Cleaning will help separate a standard clean from a
+                deeper reset so the scope matches the job.
+              </p>
+              <a href="mailto:prettybusysolutions@gmail.com"
+                >prettybusysolutions@gmail.com</a
+              >
+            </div>
+          </article>
+
+          <aside aria-label="Pretty Busy standard">
+            <h2>The Standard</h2>
+            <ul class="standard-list">
+              <li>Scope defined before arrival</li>
+              <li>Calm scheduling communication</li>
+              <li>Detail-focused cleaning</li>
+              <li>Property-respect standards</li>
+              <li>No vague quote handoff</li>
+              <li>Final result aligned with requested work</li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          Pretty Busy Cleaning. Tampa Bay home, deep, and move-in/out cleaning.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
