@@ -20,3 +20,10 @@ python3 -m http.server 8080
 
 Then open `http://127.0.0.1:8080/`. The site code is MIT licensed; brand names
 and logos are not granted as trademarks by the software license.
+
+## Static asset verification
+
+Run `python3 scripts/check_static_assets.py` before deployment. CI checks local
+script, image, stylesheet, icon, and manifest file references in the HTML pages.
+This does not execute browser JavaScript or validate backend connectivity,
+offline behavior, accessibility, or external links.
