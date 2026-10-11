@@ -27,3 +27,16 @@ Run `python3 scripts/check_static_assets.py` before deployment. CI checks local
 script, image, stylesheet, icon, and manifest file references in the HTML pages.
 This does not execute browser JavaScript or validate backend connectivity,
 offline behavior, accessibility, or external links.
+
+## Browser and cache verification
+
+The browser workflow loads the actual shipped application at desktop and mobile
+sizes, checks uncaught JavaScript errors, registers the service worker, and reloads
+the cached shell offline. It checks preservation of unrelated origin caches.
+Service-worker tests also assert that third-party requests, API requests and
+writes bypass the public shell cache. The worker clears only its own versioned caches.
+
+These checks do not establish backend availability, authenticated job mutation,
+payment fulfillment, conversion effectiveness or accessibility conformance.
+Local browser execution was unavailable during reconciliation because Chromium
+could not be downloaded; GitHub browser results must be checked on the exact head.
